@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { styles } from '../../constants';
+import { sizeUtil } from '../../utils';
 
 const Wrapper = styled.TouchableOpacity.attrs(() => {})`
   flex-direction: row;
@@ -20,22 +21,22 @@ const Wrapper = styled.TouchableOpacity.attrs(() => {})`
 `;
 
 const ButtonText = styled.Text`
-  font-size: 20px;
+  font-size: ${sizeUtil.scale(16)}px;
   font-family: Roboto-Bold;
   color: ${styles.white};
   margin-right: 10px;
 `;
 const ButtonIcon = styled.Image`
   resize-mode: contain;
-  width: 32px;
-  height: 32px;
+  width: ${sizeUtil.verticalScale(30)}px;
+  height: ${sizeUtil.verticalScale(30)}px;
 `;
 
 const DefaultButton = props => {
-  const { icon, text, onClick } = props;
+  const { icon, text } = props;
 
   return (
-    <Wrapper {...props} onPress={onClick}>
+    <Wrapper {...props}>
       {text ? <ButtonText>{text}</ButtonText> : null}
       {icon ? <ButtonIcon source={icon} /> : null}
     </Wrapper>

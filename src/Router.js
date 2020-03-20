@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { LoginScreen } from './screens';
+import { SignInScreen, SignUpScreen } from './screens';
 
 const AuthenticationStack = createStackNavigator();
 
@@ -11,11 +11,8 @@ const Router = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <AuthenticationStack.Screen
-        name="login"
-        component={LoginScreen}
-        options={{ title: 'overview' }}
-      />
+      <AuthenticationStack.Screen name="signIn" component={SignInScreen} />
+      <AuthenticationStack.Screen name="signUp" component={SignUpScreen} />
     </AuthenticationStack.Navigator>
   );
 };

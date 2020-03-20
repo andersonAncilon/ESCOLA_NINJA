@@ -9,6 +9,7 @@ const Wrapper = styled.View`
   align-items: ${props => props.alignItems ?? 'center'};
   background-color: ${styles.backgroundColor};
   font-family: 'Roboto-Regular';
+  padding-bottom: 20px;
 `;
 
 const DefaultLayout = props => <Wrapper {...props} />;

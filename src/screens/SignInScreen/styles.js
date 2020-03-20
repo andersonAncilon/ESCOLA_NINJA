@@ -1,9 +1,6 @@
 import styled from 'styled-components/native';
 import { styles } from '../../constants';
-
-const InputsWrapper = styled.View`
-  margin-top: 0.07%;
-`;
+import { sizeUtil } from '../../utils';
 
 const AuthButtonsWrapper = styled.View`
   flex-direction: row;
@@ -28,11 +25,10 @@ const ForgotPasswordButton = styled.TouchableOpacity`
 const ForgotPasswordText = styled.Text`
   font-family: Roboto-Bold;
   color: ${styles.white};
-  font-size: 18px;
+  font-size: ${sizeUtil.scale(15)}px;
 `;
 
 export {
-  InputsWrapper,
   AuthButtonsWrapper,
   SocialButtonsWrapper,
   ForgotPasswordButton,
